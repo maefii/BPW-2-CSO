@@ -19,6 +19,7 @@ public class CutsceneTrigger : MonoBehaviour
     public GameObject ccAylaBack;
     public GameObject ccAylaSide;
     public GameObject ccAylaLift;
+    public GameObject ccNightSky;
 
     [Header("Ayla")]
     public GameObject AylaHolding;
@@ -30,6 +31,9 @@ public class CutsceneTrigger : MonoBehaviour
     public GameObject LanternHolding;
     public GameObject LanternWalking;
     public GameObject LanternLifting;
+
+    [Header("Night Sky Lanterns")]
+    public GameObject Lantern1;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,6 +55,8 @@ public class CutsceneTrigger : MonoBehaviour
         StartCoroutine(CamSwitchFour());
 
         StartCoroutine(CamSwitchFive());
+
+        StartCoroutine(CamSwitchSix());
 
         StartCoroutine(FinishCutscene());
     }
@@ -109,16 +115,29 @@ public class CutsceneTrigger : MonoBehaviour
         ccAylaSide.SetActive(false);
     }
 
+    IEnumerator CamSwitchSix() //ayla lift to night sky
+    {
+        yield return new WaitForSeconds(21);
+
+        ccNightSky.SetActive(true);
+        Lantern1.SetActive(true);
+
+        AylaLifiting.SetActive(false);
+        LanternLifting .SetActive(false);
+
+        ccAylaLift.SetActive(false);
+    }
+
 
     IEnumerator FinishCutscene()
     {
-        yield return new WaitForSeconds(21);
+        yield return new WaitForSeconds(30);
 
         Player.SetActive(true);
         crosshairNormal.SetActive(true);
         crosshairHover.SetActive(true);
         PlayerListener.enabled = true;
 
-        ccAylaLift.SetActive(false);
+        ccNightSky.SetActive(false);
     }
 }
