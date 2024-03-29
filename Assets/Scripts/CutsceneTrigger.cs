@@ -5,6 +5,8 @@ using UnityEngine.VFX;
 
 public class CutsceneTrigger : MonoBehaviour
 {
+    public gameManager MotherExecuter;
+
     [Header("Player variables")]
     public GameObject Player;
     public AudioListener PlayerListener;
@@ -34,6 +36,7 @@ public class CutsceneTrigger : MonoBehaviour
 
     [Header("Night Sky Lanterns")]
     public GameObject Lantern1;
+    public GameObject Lantern2;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -121,6 +124,7 @@ public class CutsceneTrigger : MonoBehaviour
 
         ccNightSky.SetActive(true);
         Lantern1.SetActive(true);
+        Lantern2.SetActive(true);
 
         AylaLifiting.SetActive(false);
         LanternLifting .SetActive(false);
@@ -133,10 +137,9 @@ public class CutsceneTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(30);
 
-        Player.SetActive(true);
-        crosshairNormal.SetActive(true);
-        crosshairHover.SetActive(true);
-        PlayerListener.enabled = true;
+        MotherExecuter.EndGame();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         ccNightSky.SetActive(false);
     }

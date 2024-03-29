@@ -25,6 +25,11 @@ public class gameManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void EndGame()
+    {
+        SceneManager.LoadScene("endMenu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
