@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/forestNight.unity
     guid: 8374c7e6ceea1c346845fc0bc250f59c
+  - enabled: 1
+    path: Assets/Scenes/endMenu.unity
+    guid: 94fed9d1f326eb747afa9a0d19d82dd2
   m_configObjects: {}

@@ -7827,6 +7827,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: nightsky lantern1
       objectReference: {fileID: 0}
+    - target: {fileID: 6580019390831424723, guid: 0ad684345242d064192bfe050a891de9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ad684345242d064192bfe050a891de9, type: 3}
 --- !u!1 &1278763778
@@ -9643,7 +9648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1901984992
 Transform:
   m_ObjectHideFlags: 0
@@ -12393,6 +12398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: nightsky lantern1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580019390831424723, guid: 0ad684345242d064192bfe050a891de9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ad684345242d064192bfe050a891de9, type: 3}
